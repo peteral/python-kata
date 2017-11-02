@@ -1,16 +1,13 @@
 """
-My module
+Coding kata http://ccd-school.de/coding-dojo/function-katas/csv-tabellieren/
 """
 import numpy as np
 
 def tabelliere(unformatted):
-    lines = unformatted.splitlines()
-    cells = [line.split(';') for line in lines]
+    cells = [line.split(';') for line in unformatted.splitlines()]
     widths = np.array([[len(text) for text in line] for line in cells]).transpose()
     max_widths = [max(column) for column in widths]
-
-    formatted = [[row[i].ljust(max_widths[i]) + "|" for i in range(len(row))] for row in cells]
-    formatted = [''.join(row) for row in formatted]
+    formatted = [''.join([row[i].ljust(max_widths[i]) + "|" for i in range(len(row))]) for row in cells]
     formatted.insert(1, ''.join(['-' * width + '+' for width in max_widths]))
 
     return formatted
