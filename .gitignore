@@ -1,0 +1,4 @@
+python_kata/__pycache__/*
+
+python-kata/__pycache__/from_roman.cpython-36.pyc
+python-kata/__pycache__/from_roman_test.cpython-36.pyc

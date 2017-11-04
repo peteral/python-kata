@@ -1,0 +1,10 @@
+{
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        ".\\python-kata",
+        "-p",
+        "*_test.py"
+    ],
+    "python.unitTest.unittestEnabled": true
+}
